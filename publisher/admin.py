@@ -2,13 +2,13 @@ import json
 
 from django.contrib.admin import ModelAdmin, SimpleListFilter
 from django.contrib import messages
-from django.conf.urls import url
 from django.core.exceptions import PermissionDenied
 from django.urls import reverse
+from django.urls import re_path as url
 from django.http import Http404, HttpResponseRedirect, HttpResponse
-from django.utils.encoding import force_text
+from django.utils.encoding import force_str as force_text
 from django.utils.html import escape
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 from django import forms
 from django.template import loader, Context
 
